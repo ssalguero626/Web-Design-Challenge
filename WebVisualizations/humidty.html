@@ -20,21 +20,20 @@
   <body>
 
    <!-- Define the Navigation Bar --> 
-
+     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand d-inline p-2 ml-5 bg-info text-white mb-0 pb-0" href="./index.html">Latitude</a>
-      
+      <a class="navbar-brand d-inline p-2 ml-5 bg-info text-white mb-0" href="./index.html">Latitude</a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-       
+  
+			        
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
-				<ul class="nav navbar-nav ml-auto">  
+        <!--<ul class="navbar-nav mr-auto"> -->
+				<ul class=" nav navbar-nav ml-auto">  
         	<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
-            aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Plots
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,6 +41,8 @@
               <a class="dropdown-item" href="./humidity.html">Humidity Plot</a>
               <a class="dropdown-item" href="./clouds.html">Cloudiness Plot</a>
               <a class="dropdown-item" href="./wind.html">Windspeed Plot</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./index.html">Back to Home Page</a>
             </div>
           </li>
 					
@@ -58,6 +59,7 @@
       </div>
     </nav>
 
+   
 <!-- define the container to hold the temperature plot with description and the visualisations plots -->
 <!-- this first section creates the example plot and the description -->   
 
@@ -65,12 +67,18 @@
     <section class="row">
       <div class="col-lg-7 col-md-12">
           <div class="plot-content">
-            <h1 class="plot-header">Summary: Latitude vs. X</h1>
+            <h1 class="plot-header">Humidity</h1>
             <hr>
-            <img src="" alt="Latitude vs. Temperature" id="landing-image">
+            <img src="./visualisations/Humidity_plot.png" alt="Latitude vs. Humidity" id="other-image">
 
-            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+            <p>
+              The humidity level does not appear to be strongly correlated with latitude based on this plot.  
+              There is some evidence that cities at the higher latitude are more humid.  However, I don't believe
+              we can come to a conclusion based on this plot, as the underlying data was just a snapshot
+              of wether conditions based on a particular day and time.  Further research would be needed
+              to make valid conclusion.
+            </p>
+            
           </div>
         </div>
       
@@ -84,25 +92,25 @@
 
             <div class="row">
 
-              <div class="col-lg-6 col-md-3">
+              <div class="col-6">
                 <a href="./temp.html">
-                <img src="images\temp_plot.png"  alt="Latitude vs. Temperature" id="vis-image">
+                <img src="./visualisations/temperature_plot.png"  alt="Latitude vs. Temperature" id="vis-image">
                 </a>
               </div>
           
-              <div class="col-lg-6 col-md-3">
+              <div class="col-6">
                 <a href="./humidity.html">
                 <img src="./visualisations/humidity_plot.png" alt="Latitude vs. Humidity" id="vis-image">
                 </a>
               </div>
           
-              <div class="col-lg-6 col-md-3">
+              <div class="col-6">
                 <a href="./clouds.html">
                 <img src="./visualisations/clouds_plot.png" alt="Latitude vs. Cloudiness" id="vis-image">
                 </a>
               </div>
 
-              <div class="col-lg-6 col-md-3">
+              <div class="col-6">
                 <a href="./wind.html">
                 <img src="./visualisations/wind_plot.png" alt="Latitude vs. Wind Speed" id="vis-image">
                 </a>
@@ -112,8 +120,7 @@
         
         </div>
       </div>
-  </div>  
-
+    </div>  
   </body>
     
 
